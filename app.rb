@@ -25,11 +25,11 @@ class App < Sinatra::Base
     erb:q5
   end
   
-  get '/quizresults'do
-    erb:quizresults
-  end
+  # get '/quizresults'do
+  #   erb:quizresults
+  # end
   
-  post '/quizresults' do 
+  post '/quiz' do 
     @result = quiz(params[:location], params[:hands], params[:active], params[:work], params[:outgoing])
     erb :quizresults
   end
@@ -37,6 +37,7 @@ class App < Sinatra::Base
   get '/start'do
     erb :start
   end
+  
   get '/results' do
     erb:results
   end
