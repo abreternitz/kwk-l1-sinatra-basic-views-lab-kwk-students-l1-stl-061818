@@ -1,16 +1,16 @@
-require 'bundler'
-Bundler.require
-require './config/environment'
+# require 'bundler'
+# Bundler.require
+# require './config/environment'
 
-class ApplicationController < Sinatra::Base
+# class ApplicationController < Sinatra::Base
 
-  configure do
-  	set :views, "views"
-  end  
+#   configure do
+#   	set :views, "views"
+#   end  
   
-  get '/' do
-    erb :index
-  end  
+#   get '/' do
+#     erb :index
+#   end  
   
 def quiz(location, hands, active, work, outgoing)
     outdoors = 0
@@ -87,5 +87,4 @@ def quiz(location, hands, active, work, outgoing)
     else
         "You should try a mix. Please check all categories."
     end 
-end
 end
