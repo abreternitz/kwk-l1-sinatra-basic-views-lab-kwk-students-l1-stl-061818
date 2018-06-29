@@ -27,7 +27,7 @@ class App < Sinatra::Base
   # get '/quizresults'do
   #   erb:quizresults
   # end
-  post '/quiz' do 
+  post '/quizresults' do 
     @result = quiz(params[:location], params[:hands], params[:active], params[:work], params[:outgoing])
     erb :quizresults
   end
