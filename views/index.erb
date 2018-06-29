@@ -1,20 +1,20 @@
 <!DOCTYPE html>
 <html>
-     <head class="cursorcustom">
+    <head>
         <meta http-equiv="content-type" content="text/html; charset=utf-8" />
         <title>HobbyHub</title>
         <script src="code.js" type="text/javascript" charset="utf-8"></script>        
         <link href="style.css" rel="stylesheet" type="text/css">
-        <link href="https://fonts.googleapis.com/css?family=Playfair+Display" rel="stylesheet">
-        <style>
-h1 {
+        <link href="https://fonts.googleapis.com/css?family=Playfair+Display:400,700,900,900i" rel="stylesheet">
+ <style>
+   h1 {
     font-family: 'Playfair Display', serif;
     color: white;
     text-align:center;
 }
 h2 {
     font-family: 'Playfair Display', serif;
-    color: teal;
+    color: #008080;
     
 }
 
@@ -23,13 +23,7 @@ body {
     background-repeat: no-repeat;
     background-size: cover;
 }
-.texttest {
-    background-color:#D9D4D2;
-    border:2px solid white;
-    padding:6px;
-    text-align:left;
-    font-family: 'Playfair Display', serif;
-}
+
 ul {
     list-style-type: none;
     margin: 0;
@@ -65,6 +59,32 @@ li a {
     text-decoration: none;
 }
 
+.lightbulb {
+    width: 150px;
+    height: 150px;
+    float: left;
+    vertical-align: auto;
+}
+
+.lightbulb2 {
+    width: 150px;
+    height: 150px;
+    float: right;
+    vertical-align: auto;
+}
+
+.bball {
+    width: 466px;
+    height: 312px;
+    float: middle;
+}
+
+.phone {
+    width: 100px;
+    height: 100px;
+    float: right;
+}
+
 li a:hover {
     background-color: teal;
     color:white;
@@ -73,6 +93,7 @@ li a:hover {
 
 .bold {
     font-weight: bold;
+    color: teal;
 }
 .divText {
     background-color:#D9D4D2;
@@ -89,6 +110,7 @@ li a:hover {
     font-family: 'Playfair Display', serif;
 }
 .button {
+    
      font-size:16px;
      padding: 12px;
      background-color: white;
@@ -98,29 +120,45 @@ li a:hover {
 }
  
 .button:hover {
-    background-color: #333A42;
+    background-color: teal;
     color: white;
     padding: 12px;
+    border:solid white;
 } 
 .star {
     text-align:left;
     font-size:20px;
     color: #102C4C;
 }
-.cursorcustom {
-    cursor: url("http://www.rw-designer.com/cursor-view/23178.png"), auto;
+
+.personal {
+    font-size: 20px;
+    color: #102C4C;
+    font-family: 'Playfair Display', serif; 
+    font-weight: 700;
+    font-style: italic;
 }
-/*.*/
-/*.test { */
-/*    background-color:#D9D4D2;*/
-/*    border:2px solid white;*/
-/*    padding:6px;*/
-/*    text-align:left;*/
-/*    font-family: 'Playfair Display', serif;*/
-/*}*/
-        </style>
+
+.cash {
+    width: 20px;
+    height: 15px;
+    color: teal;
+}
+
+.divTest { 
+    background-color:#D9D4D2;
+    border:2px solid white;
+    padding:6px;
+    text-align:left;
+    font-family: 'Playfair Display', serif;
+}
+
+.cursor {
+    
+
+ </style>
     </head>
-    <body class="cursorcustom">       
+    <body>       
         <h1>Hobby Hub</h1>
         <h3></h3>
        
@@ -134,17 +172,21 @@ li a:hover {
         </ul>
         </div> <br>
      <br>
+        
         <div class="divText">
         <h2>About Us:</h2>
         <p> Our mission is to help everyone find a hobby that suits them perfectly. Our goal is to get everyone interested in something that can either help them find their perfect career, something to help them relieve stress, or fill up empty space during the weekend.  </p>
         </div>
         <br>
         <div class="divText">
+            <img src="https://image.flaticon.com/icons/svg/349/349382.svg" class="lightbulb">
+            <img src="https://image.flaticon.com/icons/svg/349/349382.svg" class="lightbulb2">
             <h2>Why Hobbies Are Important</h2>
-            <p>Hobbies can be helpful to everyone, no matter their age. You're never too old or young to find an activity to help you take your mind off of everyday things. Hobbies can help you find yourself, or even another person. They can bring people together and help you find a purpose. Most hobbies require creativity and developing creativity through a hobby can transfer directly into creativity at work. There are not many ways on the job to develop creativity and this skill is extremely important in today’s business world. </p>
+            <p>Hobbies can be helpful to everyone, no matter their age. You're never too old or young to find an activity to help you take your mind off of everyday things. Hobbies can help you find yourself, or even another person. They can bring people together and help you find a purpose. Most hobbies require creativity and developing creativity through a hobby can transfer directly into creativity at work. There are not many ways on the job to develop creativity and this skill is extremely important in today’s business world.</p>
+            <img src="https://images.pexels.com/photos/610294/pexels-photo-610294.jpeg?auto=compress&cs=tinysrgb&h=350">
         </div>
         <br>
-        <div class="texttest">
+        <div class="divTest">
             <h2 style="text-align:center;">Testimonials:</h2>
             <p class="star">2 stars</p>            
             <p>Too informative. I took this quiz shortly after signing up for “Golden Oldies Bowling”. The quiz informed me that I was actually unhappy in my marriage, that I “used anger to hide my true emotions”, and that I “don’t believe I deserve love”.
@@ -156,14 +198,17 @@ li a:hover {
             <p>Too engaging. As a parent of 2 I was way to busy for most hobbies. The quiz recommended that I “find inner peace through painting” . By the time the transformation to “zen painter” was almost complete I had become a totally distant parent. I would drink the warm sun against my skin and paint the colors. I would bathe in whalesong and sketch the songs with oil on canvas. I would sing with the brings and eternalize our songs with a soft charcoal pencil. It was very fulfilling buy totally all consuming. After several months of painting the school called and said that I was being sued for neglect. Would not recommend. <br> ~Alice from New Castle, UK </p>
             <hr>
 <p class="star">5 stars</p> 
-<p>I am writing the review on behalf of my ex-girlfriend, Miranda. Before we broke up the quiz recommended that she “take up canoeing”. Miranda and I don’t really talk much, but her instagram is overflowing with canoe pictures: Miranda canoeing with friends, Miranda at the Canoe Club, Miranda buying Canoe wax with her mother. Miranda and I each needed our own space, and it’s wonderful to see that her space is occupied with such a productive hobby.<br> ~ Bertha from Sydney, AUS</p>
+<p class="test">I am writing the review on behalf of my ex-girlfriend, Miranda. Before we broke up the quiz recommended that she “take up canoeing”. Miranda and I don’t really talk much, but her instagram is overflowing with canoe pictures: Miranda canoeing with friends, Miranda at the Canoe Club, Miranda buying Canoe wax with her mother. Miranda and I each needed our own space, and it’s wonderful to see that her space is occupied with such a productive hobby.<br> ~ Bertha from Sydney, AUS</p>
     <hr>
 <p class="star">2 stars</p>
-<p class="test">Oh man, words cannot express how wrong this quiz was. It recommend that I become “an adventurous epicurean” and that I “try new foods”. I took Gummi Bear Cleanse ASAP and boy was that a mistake.<br>
+<p>Oh man, words cannot express how wrong this quiz was. It recommend that I become “an adventurous epicurean” and that I “try new foods”. I took Gummi Bear Cleanse ASAP and boy was that a mistake.<br>
     Taste was good- 5 out of 5.<br>
     After effects were 100% negative. The gastrointestinal outcome of this cleanse totally outweighed  the taste. I was cramped, bloated, and bursting out both ends like a broken fire hydrant. I’ve had bad food poisoning before, but this time it was like the Mississippi river was flowing out of you-know-where.<br>
 Quiz should give more specificity about what being “an adventurous epicurean” entails.<br>
 ~Bill From Tallahassee</p>
+<hr>
+<p class="star">5 stars</p> 
+<p class="test">This quiz is legit. It's the real deal<br> ~ Evie from Cape Girardeau </p>
         </div>
         <footer class="footer">
           <p>Created by: Amy Ma, Brynne Bursack, Alice Breternitz</p>

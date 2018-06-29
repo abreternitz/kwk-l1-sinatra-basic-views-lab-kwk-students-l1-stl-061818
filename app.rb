@@ -1,4 +1,5 @@
 require_relative 'config/environment'
+require_relative './models/quiz.rb'
 
 class App < Sinatra::Base
 
@@ -23,12 +24,20 @@ class App < Sinatra::Base
   get '/q5'do
     erb:q5
   end
-  get '/quizresults'do
-    erb:quizresults
+  
+  # get '/quizresults'do
+  #   erb:quizresults
+  # end
+  
+  post '/quiz' do 
+    @result = quiz(params[:location], params[:hands], params[:active], params[:work], params[:outgoing])
+    erb :quizresults
   end
+    
   get '/start'do
     erb :start
   end
+  
   get '/results' do
     erb:results
   end

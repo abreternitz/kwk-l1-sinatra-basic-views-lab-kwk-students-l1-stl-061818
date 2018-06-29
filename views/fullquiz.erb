@@ -1,4 +1,4 @@
- <!DOCTYPE HTML>
+<!DOCTYPE HTML>
  <html> 
      <head>
           <meta http-equiv="content-type" content="text/html; charset=utf-8" />
@@ -148,126 +148,36 @@ li a:hover {
         <div class="divText">
         <h2>Hobby Finder Quiz!</h2>
         <h2 style="font-size:20px;color:black">Hi! Welcome to the quiz! </h2>
-        <form method=POST>
-    <%@@sports = 0 %>
-    <%@@outdoors = 0 %>
-    <%@@mind = 0  %>
-    <%@@performing = 0 %>
-    <%@@arts = 0 %>
+        <form method=POST action="quiz">
+            
         <h3>Where would you like to do this activity?</h3>
-         <input type="radio" name="locationa" value="location"> Outdoors
-         <input type="radio" name="locationb" value="location">Indoors
-         <input type="radio" name="locationc" value="location">No Preference
-    <%if params[:name]=="locationa"%>
-       <%@@outdoors += 1%>
-      <%@@sports += 1%> 
-<%elsif params[:name]=="locationb"%>
-      <%@@mind +=1 %>
-      <%@@performing += 1%>
-      <%@@arts += 1%>
-      <%@@sports += 1 %>
-<%elsif params[:name]== "locationc"%>
-      <%@@sports += 1%>
-      <%@@outdoors += 1%>
-      <%@@mind += 1 %>
-      <%@@performing += 1%>
-      <%@@arts += 1 %>
-      <%end%>
+         <input type="radio" name="location" value="outdoors"> Outdoors
+         <input type="radio" name="location" value="indoors">Indoors
+         <input type="radio" name="location" value="none">No Preference
+
           <h3>Do you like to work with your hands?</h3>
-         <input type="radio" name="handsa" value="hands">Yes
-         <input type="radio" name="handsb" value="hands">No
-       <%if params[:name]=="handsa"%>
-       <%@@arts += 1%>
-<%elsif params[:name]=="handsb"%>
-      <%@@sports +=1 %>
-      <%@@mind += 1%>
-      <%@@outdoors += 1 %>
-      <%@@performing += 1%>
-      <%end%>
+         <input type="radio" name="hands" value="yes">Yes
+         <input type="radio" name="hands" value="no">No
+
       <br>
       <h3>Do you like to be active?</h3>
-            <input type="radio" name="activea" value="active">Yes
-            <input type="radio" name="activeb" value="active">No
-<%if params[:name]=="activea"%>
-       <%@@outdoors += 1%>
-       <%@@sports +=1 %>
-<%elsif params[:name]=="activeb"%>
-      <%@@mind += 1%>
-      <%@@arts += 1 %>
-      <%@@performing += 1%>
-      <%end%>
+            <input type="radio" name="active" value="yes">Yes
+            <input type="radio" name="active" value="no">No
+
         <br>
          <h3>How do you like to work?</h3>
-            <input type="radio" name="worka" value="work">Alone
-            <input type="radio" name="workb" value="work">With Others
-<%if params[:name]=="worka"%>
-      <%@@outdoors += 1%>
-      <%@@sports +=1 %>
-      <%@@mind += 1%>
-      <%@@arts += 1 %>
-<%elsif params[:name]=="workb"%>
-      <%@@performing += 1%>
-      <%@@outdoors += 1%>
-      <%@@sports +=1 %>
-      <%end%>
+            <input type="radio" name="work" value="alone">Alone
+            <input type="radio" name="work" value="others">With Others
+
       <br>
        <h3> Are you outgoing?</h3>
-            <input type="radio" name="outgoinga" value="outgoing">Yes
-            <input type="radio" name="outgoingb" value="outgoing">No<br><br>
-  <%if params[:name]=="outgoinga"%>
-      <%@@performing += 1%>
-      <%@@outdoors += 1%>
-      <%@@sports +=1 %>
-<%elsif params[:name]=="outgoingb"%>
-     <%@@outdoors += 1%>
-      <%@@sports +=1 %>
-      <%@@mind += 1%>
-      <%@@arts += 1 %>
-      <%end%>
- 
-     <%@@sports %>
-     <%@@outdoors %>
-     <%@@mind %>
-     <%@@arts%>
-     <%@@performing%>
-  <a href="/quizresults"> <button class="button">Submit</a></button>
+            <input type="radio" name="outgoing" value="yes">Yes
+            <input type="radio" name="outgoing" value="no">No<br><br>
+
+            <input type="submit" value="hobby me!"> 
       </form>
  </div>      
  <hr>
-
-
-<div class="divText">     
-     <%if @@sports>@@performing && @@sports>@@outdoors && @@sports>@@arts && @@sports>@@mind%>
-<%= "You should try some indoor sports! It'll benefit you physically. Check out the Indoor Sports section for some suggestions." %>
-<%elsif @@mind>@@performing && @@mind>@@outdoors && @@mind>@@arts && @@mind>@@sports %>
-  <%="You should try something challenging to the mind. Please look in the ming challenge section." %>
-<%elsif @@arts>@@performing && @@arts>@@outdoors && @@arts>@@mind && @@arts>@@sports %>
-<%= "You should try something art related! You are creative and your creativity can help with your projects. Please look at the art category to see what some options are!" %>
-<%elsif @@performing>@@arts && @@performing>@@outdoors && @@performing>@@mind && @@performing>@@sports %>
-<%="You should try performing arts. It'll give you a good challenge." %>
-<%elsif @@outdoors>@@arts && @@outdoors>@@mind && @@outdoors>@@sports && @@outdoors>@@performing %>
-<%="You should try something adventurous. You shoud look in the outdoor section." %>
-<%elsif @@performing>=@@arts %>
-  <%=  "You should try performing arts or anything art related. Please check both categories." %>
-<%elsif @@performing>=@@mind  %>
-<%=  "You should try performing arts or anything mind related. Please check both categories." %>
-<%elsif @@performing>=@@outdoors %>
-<%=  "You should try performing arts or anything outdoor related. Please check both categories." %>
-<%elsif @@performing>=@@sports %>
-<%=  "You should try performing arts or anything sports related. Please check both categories." %>
-<%elsif @@arts>=@@sports %>
-<%=  "You should try art or anything sports related.Please check both categories." %>
-<%elsif @@arts>=@@mind %>
-<%=  "You should try art or anything mind related.Please check both categories." %>
-<%elsif @@arts>=@@outdoors %>
-<%=  "You should try art or anything outdoors related.Please check both categories." %>
-<%elsif @@mind>=@@sports %>
-<%=  "You should try mind or anything sports related.Please check both categories." %>
-<%elsif @@mind>=@@outdoors  %>
-<%=  "You should try mind or anything outdoors related.Please check both categories." %>
-<%elsif @@outdoors>=@@sports %>
-<%=  "You should try anything outdoors or sports related. Please check both catergories." %>
-<%end%>
  
 
 </div> 
