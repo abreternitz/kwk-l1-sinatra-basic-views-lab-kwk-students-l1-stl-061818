@@ -88,3 +88,4 @@ def quiz(location, hands, active, work, outgoing)
         "You should try a mix. Please check all categories."
     end 
 end
+end
