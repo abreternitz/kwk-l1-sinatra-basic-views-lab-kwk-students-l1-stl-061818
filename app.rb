@@ -1,5 +1,5 @@
 require_relative 'config/environment'
-require_relative 'models/quiz.rb'
+require_relative './models/quiz.rb'
 
 class App < Sinatra::Base
 
