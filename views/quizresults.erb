@@ -141,37 +141,8 @@ li a:hover {
         <h2 style="font-size:20px;color:black">Quiz Results: </h2>
 <p>
   
-     <%if @@sports>@@performing && @@sports>@@outdoors && @@sports>@@arts && @@sports>@@mind%>
-<%= "You should try some indoor sports! It'll benefit you physically. Check out the Indoor Sports section for some suggestions." %>
-<%elsif @@mind>@@performing && @@mind>@@outdoors && @@mind>@@arts && @@mind>@@sports %>
-  <%="You should try something challenging to the mind. Please look in the ming challenge section." %>
-<%elsif @@arts>@@performing && @@arts>@@outdoors && @@arts>@@mind && @@arts>@@sports %>
-<%= "You should try something art related! You are creative and your creativity can help with your projects. Please look at the art category to see what some options are!" %>
-<%elsif @@performing>@@arts && @@performing>@@outdoors && @@performing>@@mind && @@performing>@@sports %>
-<%="You should try performing arts. It'll give you a good challenge." %>
-<%elsif @@outdoors>@@arts && @@outdoors>@@mind && @@outdoors>@@sports && @@outdoors>@@performing %>
-<%="You should try something adventurous. You shoud look in the outdoor section." %>
-<%elsif @@performing>=@@arts %>
-  <%=  "You should try performing arts or anything art related. Please check both categories." %>
-<%elsif @@performing>=@@mind  %>
-<%=  "You should try performing arts or anything mind related. Please check both categories." %>
-<%elsif @@performing>=@@outdoors %>
-<%=  "You should try performing arts or anything outdoor related. Please check both categories." %>
-<%elsif @@performing>=@@sports %>
-<%=  "You should try performing arts or anything sports related. Please check both categories." %>
-<%elsif @@arts>=@@sports %>
-<%=  "You should try art or anything sports related.Please check both categories." %>
-<%elsif @@arts>=@@mind %>
-<%=  "You should try art or anything mind related.Please check both categories." %>
-<%elsif @@arts>=@@outdoors %>
-<%=  "You should try art or anything outdoors related.Please check both categories." %>
-<%elsif @@mind>=@@sports %>
-<%=  "You should try mind or anything sports related.Please check both categories." %>
-<%elsif @@mind>=@@outdoors  %>
-<%=  "You should try mind or anything outdoors related.Please check both categories." %>
-<%elsif @@outdoors>=@@sports %>
-<%=  "You should try anything outdoors or sports related. Please check both catergories." %>
-<%end %>
+	<%=@result%>
+
 </p>
   <br> 
   <a href="/results"> <button class="button">Check the catergories</a></button>
@@ -183,3 +154,4 @@ li a:hover {
         </footer>
 </body>
 </html>
+
